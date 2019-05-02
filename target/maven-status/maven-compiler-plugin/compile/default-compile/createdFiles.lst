@@ -1,1 +1,16 @@
+com\example\student\event\relation\domain\model\Student$Campus.class
+com\example\student\event\relation\domain\model\Student.class
+com\example\student\event\relation\infrestructure\repository\StudentEventRelationHttpClientRepository.class
 com\example\student\event\relation\Application.class
+com\example\student\event\relation\domain\repository\EventRepository.class
+com\example\student\event\relation\domain\model\Event.class
+com\example\student\event\relation\infrestructure\repository\EventHttpClientRepository.class
+com\example\student\event\relation\domain\service\EventService.class
+com\example\student\event\relation\domain\model\StudentEventRelation.class
+com\example\student\event\relation\domain\service\StudentEventService.class
+com\example\student\event\relation\domain\service\StudentService.class
+com\example\student\event\relation\infrestructure\repository\StudentHttpClientRepository.class
+com\example\student\event\relation\infrestructure\controller\StudentEventRelationController.class
+com\example\student\event\relation\domain\repository\StudentRepository.class
+com\example\student\event\relation\domain\model\Student$Career.class
+com\example\student\event\relation\domain\repository\StudentEventRelationRepository.class

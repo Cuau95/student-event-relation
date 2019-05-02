@@ -1,14 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.example.student.event.relation.domain.service;
 
-/**
- *
- * @author elzua
- */
+import com.example.student.event.relation.domain.model.Student;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
 public class StudentEventService {
+    
+    private StudentService studentService;
+    private EventService eventService;
+
+    @Autowired
+    public StudentEventService(StudentService studentService, EventService eventService) {
+        this.studentService = studentService;
+        this.eventService = eventService;
+    }
+    
+    public Student getStudentById(String id) {
+        return studentService.getStudentById(id);
+    }
     
 }

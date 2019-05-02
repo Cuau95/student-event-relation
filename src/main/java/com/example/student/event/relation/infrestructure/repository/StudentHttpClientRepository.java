@@ -8,11 +8,13 @@ import java.net.URI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
 
-public class StudentHttpClientRepository implements StudentRepository{
+@Repository
+public class StudentHttpClientRepository implements StudentRepository {
     
-    private RestTemplate restTemplate;
+    private final RestTemplate restTemplate;
 
     @Autowired
     public StudentHttpClientRepository(RestTemplate restTemplate) {
