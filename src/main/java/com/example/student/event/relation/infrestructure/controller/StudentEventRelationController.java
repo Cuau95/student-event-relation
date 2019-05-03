@@ -22,7 +22,7 @@ public class StudentEventRelationController {
         this.studentEventService = studentEventService;
     }
     
-    @PostMapping("student/id/{id}")
+    @PostMapping("/student/id/{id}")
     public ResponseEntity<Student> getStudentEventRelation(@PathVariable("id") String id) {
         return new ResponseEntity<>(studentEventService.getStudentById(id), OK);
     }
