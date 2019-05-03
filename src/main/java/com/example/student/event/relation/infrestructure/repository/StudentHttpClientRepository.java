@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 @Repository
 public class StudentHttpClientRepository implements StudentRepository {
 
-    private final RestTemplate restTemplate;
+    private RestTemplate restTemplate;
 
     @Autowired
     public StudentHttpClientRepository(RestTemplate restTemplate) {
