@@ -12,5 +12,6 @@ com\example\student\event\relation\domain\service\StudentService.class
 com\example\student\event\relation\infrestructure\repository\StudentHttpClientRepository.class
 com\example\student\event\relation\infrestructure\controller\StudentEventRelationController.class
 com\example\student\event\relation\domain\repository\StudentRepository.class
+com\example\student\event\relation\AppConfiguration.class
 com\example\student\event\relation\domain\model\Student$Career.class
 com\example\student\event\relation\domain\repository\StudentEventRelationRepository.class
