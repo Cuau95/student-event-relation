@@ -4,20 +4,20 @@ import java.io.Serializable;
 
 public class Student implements Serializable {
 
-    private String idAlumno;
+    private String id;
     private String nombreAlumno;
     private String pApellido;
     private String mApellido;
     private String nombreCompleto;
-    private Campus escuela;
-    private Career carrera;
+    private Campus campus;
+    private Career career;
 
-    public String getIdAlumno() {
-        return idAlumno;
+    public String getId() {
+        return id;
     }
 
-    public void setIdAlumno(String idAlumno) {
-        this.idAlumno = idAlumno;
+    public void setId(String idAlumno) {
+        this.id = idAlumno;
     }
 
     public String getNombreAlumno() {
@@ -52,20 +52,20 @@ public class Student implements Serializable {
         this.nombreCompleto = nombreCompleto;
     }
 
-    public Campus getEscuela() {
-        return escuela;
+    public Campus getCampus() {
+        return campus;
     }
 
-    public void setEscuela(Campus escuela) {
-        this.escuela = escuela;
+    public void setCampus(Campus escuela) {
+        this.campus = escuela;
     }
 
-    public Career getCarrera() {
-        return carrera;
+    public Career getCareer() {
+        return career;
     }
 
-    public void setCarrera(Career carrera) {
-        this.carrera = carrera;
+    public void setCareer(Career carrera) {
+        this.career = carrera;
     }
 
     public class Campus implements Serializable {

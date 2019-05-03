@@ -1,6 +1,7 @@
 package com.example.student.event.relation.infrestructure.controller;
 
 import static org.springframework.http.HttpStatus.OK;
+import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 import com.example.student.event.relation.domain.model.Student;
 import com.example.student.event.relation.domain.service.StudentEventService;
@@ -24,7 +25,8 @@ public class StudentEventRelationController {
     
     @PostMapping("/student/id/{id}")
     public ResponseEntity<Student> getStudentEventRelation(@PathVariable("id") String id) {
-        return new ResponseEntity<>(studentEventService.getStudentById(id), OK);
+        Student student = studentEventService.getStudentById(id);
+        return (student == null) ? new ResponseEntity<>(student, NOT_FOUND) : new ResponseEntity<>(student, OK);
     }
     
 }
