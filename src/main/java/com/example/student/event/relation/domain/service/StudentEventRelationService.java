@@ -26,19 +26,18 @@ public class StudentEventRelationService {
         Student student = getStudentById(idStudent);
         Event event = getEventById(idEvent);
         StudentEventRelation studentEventRealtion = buildStudentEventRelation(student, event);
-        if(student == null || event == null){
-            return studentEventRealtion;
-        } else {
-            studentEventRealtion.setIdEventoAlumno(saveStudentEventRelationEntity(student, event).getIdEventoAlumno());
-            return studentEventRealtion;
+        if(student != null && event != null){
+            StudentEventRelationEntity studentEventRelationSaved = saveStudentEventRelationEntity(student, event);
+            studentEventRealtion.setIdEventoAlumno(studentEventRelationSaved.getIdEventoAlumno());
         }
+        return studentEventRealtion;
     }
     
     private StudentEventRelation buildStudentEventRelation(Student student, Event event) {
-        StudentEventRelation studentEventRealtion = new StudentEventRelation();
-        studentEventRealtion.setAlumno(student);
-        studentEventRealtion.setEventoFeriaEmpleo(event);
-        return studentEventRealtion;
+        StudentEventRelation studentEventRelation = new StudentEventRelation();
+        studentEventRelation.setAlumno(student);
+        studentEventRelation.setEventoFeriaEmpleo(event);
+        return studentEventRelation;
     }
     
     private StudentEventRelationEntity saveStudentEventRelationEntity(Student student, Event event) {

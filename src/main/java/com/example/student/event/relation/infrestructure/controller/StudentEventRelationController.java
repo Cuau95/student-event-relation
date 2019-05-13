@@ -25,7 +25,9 @@ public class StudentEventRelationController {
     }
     
     @PostMapping("/student/id/{idStudent}/event/id/{idEvent}")
-    public ResponseEntity<StudentEventRelation> getStudentEventRelation(@PathVariable("idStudent") String idStudent, @PathVariable("idEvent") String idEvent) {
+    public ResponseEntity<StudentEventRelation> getStudentEventRelation(
+            @PathVariable("idStudent") String idStudent, @PathVariable("idEvent") String idEvent
+    ) {
         StudentEventRelation studentEventRelation = studentEventService.saveStudentEventRelation(idStudent, idEvent);
         HttpStatus status = OK;
         if(studentEventRelation.getAlumno() == null || studentEventRelation.getEventoFeriaEmpleo() == null){
