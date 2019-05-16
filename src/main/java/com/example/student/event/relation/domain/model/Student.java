@@ -1,11 +1,9 @@
 package com.example.student.event.relation.domain.model;
 
 import java.io.Serializable;
-import javax.persistence.Id;
 
 public class Student implements Serializable {
 
-    @Id
     private String id;
     private String nombreAlumno;
     private String pApellido;
